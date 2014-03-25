@@ -11,10 +11,10 @@
          </DockPanel>
         <CheckBox DockPanel.Dock="Top" x:Name="chkRemoveAllDlls" IsChecked="True">Remove all DLLs from package</CheckBox>
         <CheckBox DockPanel.Dock="Top" x:Name="chkSetNewSolutionId" IsChecked="True">Set a new solution ID</CheckBox>
-        <CheckBox DockPanel.Dock="Top" x:Name="chkOverrideSourceFile" IsChecked="True" Checked="chkOverrideSourceFile_Checked">Override source file?</CheckBox>
+        <CheckBox DockPanel.Dock="Top" x:Name="chkOverrideSourceFile" IsChecked="False" Checked="chkOverrideSourceFile_Checked">Override source file?</CheckBox>
         <DockPanel DockPanel.Dock="Top">
             <Label DockPanel.Dock="Right" >.wsp</Label>
-            <TextBox x:Name="txtNewFileName" DockPanel.Dock="Left" IsEnabled="{Binding ElementName=chkOverrideSourceFile, Path=IsChecked, Converter={x:Static local:InverseBooleanConverter.Instance}}">{filename}</TextBox>
+            <TextBox x:Name="txtNewFileName" DockPanel.Dock="Left" IsEnabled="{Binding ElementName=chkOverrideSourceFile, Path=IsChecked, Converter={x:Static local:InverseBooleanConverter.Instance}}">{filename} 2010 BC</TextBox>
         </DockPanel>
         <Button DockPanel.Dock="Top" x:Name="btnGo" Click="btnGo_Click" IsEnabled="False">Go!</Button>
         <TextBox DockPanel.Dock="Bottom" x:Name="txtProgressLog" IsReadOnly="True" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"></TextBox >
